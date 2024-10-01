@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vandan Nguyen - Data Analyst</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Add smooth scrolling for the whole page */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 1rem;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-outline {
+            border: 1px solid #333;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero section styles */
+        .hero {
+            background: linear-gradient(135deg, #4a0e4e, #81379b);
+            color: #fff;
+            text-align: center;
+            padding: 8rem 1rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('https://raw.githubusercontent.com/creativetimofficial/tailwind-starter-kit/main/Login%20Page/react-login-page/src/assets/img/login_wave.png') repeat-x;
+            animation: wave 10s cubic-bezier(0.44, 0.66, 0.67, 0.37) infinite;
+        }
+        @keyframes wave {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+        
+        /* Projects section styles */
+        .projects {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+        .project-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .project-description {
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #f8f9fa;
+            padding: 4rem 1rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .newsletter-form button {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Vandan</div>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="https://your-resume-page-url.com" target="_blank">Resume</a></li>
+            </ul>
+            <div>
+                <a href="#" class="btn btn-outline">Get Started</a>
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="btn btn-primary">Contact Me</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>VAN DAN NGUYEN</h1>
+        <p>Data Analyst</p>
+        <div class="wave"></div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <h2>Explore projects that highlight my skills in data visualization and analysis</h2>
+        <div class="project-grid">
+            <a href="https://your-customer-segmentation-project-url.com" class="project-item" target="_blank">
+                <img src="images/Screenshot 2024-10-02 002205.png" alt="Customer Segmentation">
+                <div class="project-overlay">
+                    <div class="project-title">Customer Segmentation</div>
+                    <div class="project-description">Analysis of customer groups based on behavior and characteristics.</div>
+                </div>
+            </a>
+            <a href="https://github.com/wibu1977/E-commerce-KPI-Analysis/blob/main/E-commerce%20KPI%20analysis%20pdf.pdf" class="project-item" target="_blank">
+                <img src="images/Screenshot 2024-09-09 015141.png" alt="E-commerce KPI Visualization">
+                <div class="project-overlay">
+                    <div class="project-title">E-commerce KPI Visualization</div>
+                    <div class="project-description">Interactive dashboard for key performance indicators in e-commerce.</div>
+                </div>
+            </a>
+            <a href="https://your-web-scraping-project-url.com" class="project-item" target="_blank">
+                <img src="https://th.bing.com/th/id/OIP.5oOpZrZd64tNTUB-CV_vBwHaEK?rs=1&pid=ImgDetMain" alt="Web Scraping">
+                <div class="project-overlay">
+                    <div class="project-title">Web Scraping</div>
+                    <div class="project-description">Automated data extraction from websites for analysis.</div>
+                </div>
+            </a>
+            <a href="https://github.com/wibu1977/coffee-sale-analysis" class="project-item" target="_blank">
+                <img src="https://ichef.bbci.co.uk/news/624/cpsprodpb/1845B/production/_97791499_uk_coffee_shop_624.png" alt="Coffee Shop Sales Analysis">
+                <div class="project-overlay">
+                    <div class="project-title">Coffee Shop Sales Analysis</div>
+                    <div class="project-description">Comprehensive analysis of sales trends in a coffee shop chain.</div>
+                </div>
+            </a>
+            <a href="https://your-sentiment-analysis-project-url.com" class="project-item" target="_blank">
+                <img src="https://www.pulsesolutions.com/wp-content/uploads/2020/02/DMT20_SentimentAnalysis.jpg" alt="Sentiment Analysis">
+                <div class="project-overlay">
+                    <div class="project-title">Sentiment Analysis</div>
+                    <div class="project-description">Natural language processing to determine sentiment in customer reviews.</div>
+                </div>
+            </a>
+            <a href="https://your-sales-visualization-project-url.com" class="project-item" target="_blank">
+                <img src="images/Screenshot 2024-10-02 004838.png" alt="Sales Visualization">
+                <div class="project-overlay">
+                    <div class="project-title">Excel Sales Visualization</div>
+                    <div class="project-description">EXCEL Dynamic visualizations of sales data across multiple dimensions.</div>
+                </div>
+            </a>
+            <a href="https://your-sentiment-analysis-project-url.com" class="project-item" target="_blank">
+                <img src="images/GA4.png" alt="Marketing Analysis">
+                <div class="project-overlay">
+                    <div class="project-title">GA4 Setup & Configuration</div>
+                    <div class="project-description">Follow trend and create a dashboard in Google Looker </div>
+                </div>
+            </a>
+            <a href="https://your-sentiment-analysis-project-url.com" class="project-item" target="_blank">
+                <img src="images/churn analysis image.png" alt="Churn Analysis">
+                <div class="project-overlay">
+                    <div class="project-title">Employee Churn Analysis</div>
+                    <div class="project-description">machine learning model to determine reason in employees leave the company.</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Contact</h3>
+                <ul>
+                    <li><a href="#services">dannguyen200111@gmail.com</a></li>
+                    <li><a href="#projects"> </a></li>
+                    <li><a href="#testimonials"></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Stay updated with the latest insights and trends in data analysis and visualization.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vandan. All rights reserved. Empowering your data-driven decisions.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
