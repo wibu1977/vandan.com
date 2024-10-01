@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #profile-image {
+            width: 700px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px auto; /* Center the image and add bottom margin */
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .date-location {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        #skills ul, #certifications ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/Screenshot 2024-10-01 165750.png" alt="Van Dan Nguyen" id="profile-image">
+            <h1></h1>
+        </header>
+        </header>
+
+        <main>
+            <section id="work-experience">
+                <h2>WORK EXPERIENCE</h2>
+                
+                <article>
+                    <h3>Virtual Data Analyst Assistant</h3>
+                    <p class="date-location">
+                        <span class="date">Jul 2024 - Aug 2024</span>
+                        <span class="company">Upwork</span>
+                        <span class="location">Miami, USA</span>
+                    </p>
+                    <ul>
+                        <li>Entered and updated data into various databases and systems, enhancing data retrieval efficiency by 25%.</li>
+                        <li>Generated and compiled reports from data analysis, improving report accuracy and enhancing overall data reliability.</li>
+                        <li>Interpreted data and offered insights to aid in decision-making, resulting in an increase in operational efficiency and supporting strategic initiatives.</li>
+                        <li>Developed and maintained dashboards and data visualization tools, enhancing data accessibility and increasing data retrieval efficiency by 50%.</li>
+                        <li>Managed correspondence and addressed inquiries concerning data, achieving a 90% satisfaction rate among stakeholders.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Data Analyst Intern</h3>
+                    <p class="date-location">
+                        <span class="date">Mar 2024 - Jun 2024</span>
+                        <span class="company">Rhyme</span>
+                        <span class="location">Daegu, South Korea</span>
+                    </p>
+                    <ul>
+                        <li>Collaborated with the marketing team to analyze customer behavior, leading to a targeted marketing campaign that achieved a 25% higher conversion rate.</li>
+                        <li>Crawled data from e-commerce websites using Python and BeautifulSoup, and deployed a process that identified potential products, resulting in a 30% increase in product sourcing efficiency.</li>
+                        <li>Utilized Data Visualization Tools such as Google Looker to create interactive dashboards and detailed reports, resulting in a 30% improvement in report clarity and stakeholder engagement.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Data Analyst Freelancer</h3>
+                    <p class="date-location">
+                        <span class="date">Mar 2024 - Mar 2024</span>
+                        <span class="company">Upwork</span>
+                        <span class="location">Alexandria, Virginia, USA</span>
+                    </p>
+                    <ul>
+                        <li>Collaborated with cross-functional teams to identify key performance indicators (KPIs) and established a dashboard to track them, leading to a 25% improvement in operational efficiency.</li>
+                        <li>Created interactive data visualizations using Microsoft Power BI, leading to a reduction in time spent on generating reports for stakeholders.</li>
+                        <li>Compiled a comprehensive report after analyzing insights, resulting in an improvement in decision-making efficiency.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="education">
+                <h2>EDUCATION</h2>
+                <article>
+                    <h3>Global Business</h3>
+                    <p class="date-location">
+                        <span class="date">Jan 2021 – Feb 2025</span>
+                        <span class="institution">Hannam University</span>
+                    </p>
+                    <p>Courses: Business Management, Statistics, Data analytic with Excel</p>
+                </article>
+            </section>
+
+            <section id="projects">
+                <h2>PROJECTS</h2>
+                
+                <article>
+                    <h3>Sale Data Analysis</h3>
+                    <p class="date">Aug 2024 - Sep 2024</p>
+                    <ul>
+                        <li>Leveraged GROUP BY and SUM functions to compute total sales across different time frames, such as daily, weekly, and monthly trends.</li>
+                        <li>The DATE_FORMAT function was crucial for grouping transactions by month and generating clear, time-based reports for management.</li>
+                        <li>Using AVG functions in conjunction with JOIN operations, I computed the average transaction values, providing insights into how sales vary across different store locations.</li>
+                        <li>Utilize Common Table Expressions (CTEs) to simplify complex queries into more manageable segments and provide clear updates on product statuses.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Employee Churn Analyze</h3>
+                    <p class="date">Jun 2024 - Jun 2024</p>
+                    <ul>
+                        <li>Utilize BigQuery for querying and managing large datasets. Data sources include HR records, employee surveys, performance metrics.</li>
+                        <li>Use Google Colab for data analysis and modeling. Employ Python libraries such as Pandas, NumPy, and Scikit-learn for data manipulation, statistical analysis, and machine learning.</li>
+                        <li>Apply machine learning techniques (Random Forest Classifier) to build models that predict employee churn.</li>
+                        <li>Generate visual reports using libraries like Matplotlib and Seaborn to illustrate key findings and trends.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="skills">
+                <h2>SKILLS</h2>
+                <ul>
+                    <li><strong>Languages:</strong> Python (Numpy, Pandas), SQL</li>
+                    <li><strong>Visualization:</strong> Power BI, Looker Studio</li>
+                    <li><strong>Others:</strong> Microsoft Office (Excel, Word, PowerPoint)</li>
+                    <li><strong>Domain:</strong> Marketing</li>
+                </ul>
+            </section>
+
+            <section id="certifications">
+                <h2>CERTIFICATIONS</h2>
+                <ul>
+                    <li>Data analytics Job Simulation by Qantium (Nov 2023)</li>
+                    <li>Data Analytics by Google (May 2023)</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
